@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url(/fondnoirorange.png);
+    background-size: cover;
+    border-bottom: 2px solid black;
+}
+
+.navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    color: orangered;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+
+.nav-links ul li {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px;
+  margin-right: 25px;
+}
+
+.navbar .nav-links ul li a {
+    color: black;
+    text-shadow: 3px 3px 3px orangered;
+    font-size: 1.2rem;
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: orangered;
+    font-weight: 600;
+    text-shadow: 3px 3px 3px black;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+}

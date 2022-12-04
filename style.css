@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+}
+
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+body .logo {
+  font-family: 'Merriweather', sans-serif;
+  }
+
+header {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(/Ayuntamiento_Valencia.png);
+  background-size: cover;
+  border-bottom: 2px solid black;
+}
+
+.kenburns-top {
+	-webkit-animation: kenburns-top 10s ease-out both;
+	        animation: kenburns-top 10s ease-out both;
+}
+
+@-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  50% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+}
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  50% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+}
+.navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    color: orangered;
+    font-size: 5em;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+
+.nav-links ul li {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px;
+  margin-right: 25px;
+}
+
+.navbar .nav-links ul li a {
+    color: black;
+    text-shadow: 3px 3px 3px orangered;
+    font-size: 1.2rem;
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: orangered;
+    font-weight: 600;
+    text-shadow: 3px 3px 3px black;
+}
+
+ 
+
+.fond {
+  background-image: url(/garevalencia.png);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  border-bottom: 2px solid black;
+}
+
+.container {
+    width: 90%;
+    max-width: 1420px;
+    margin: auto;
+  }
+  h1 {
+    color: black;
+    text-shadow: 3px 3px 3px orangered;
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed gray;
+  }
+  h1 span {
+    display: block;
+  }
+  h1 span:nth-child(1) {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: orangered;
+    text-shadow: 3px 3px 3px black;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+    margin: 80px 0;
+  }
+  .card-wrapper {
+    position: relative;
+    min-height: 260px;
+    perspective: 2000px;
+    perspective-origin: top;
+    margin: 25px 0;
+  }
+  
+  .card-wrapper:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);
+    color: black;
+    font-weight: bold;
+  }
+  
+  .card-front, 
+  .card-back {
+    position: absolute;
+    height: 200px;
+    width: 310px;
+    margin-left: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background: orangered;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-wrapper:nth-child(even) .card-front {
+    background-color: black;
+    color: orangered;
+  }
+  
+  .card-front p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  
+  .arrow-icon {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+  .card-price  {
+    font-size: 45px;
+  }
+  
+  .card-back {
+    background: orangered;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .card-wrapper:nth-child(even) .card-back {
+    background-color: black;
+  }
+  
+  .card-back a {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    background-color: white;
+    font-size: 14px;
+    color: black;
+    transition: 
+    background-color 0.3s ease-out,
+    color 0.3s ease-out;
+  }
+  
+  .card-wrapper:nth-child(odd) .card-back a:hover {
+    background-color: black;
+    color: white;
+  }
+  .card-wrapper:nth-child(even) .card-back a:hover {
+    background-color: orangered;
+    color: white;
+  }
+
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+        z-index: 9999;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.13);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        z-index: 9999;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
